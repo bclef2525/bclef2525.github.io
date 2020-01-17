@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d1b05096.chunk.css",
+    "main.js": "/static/js/main.4868e6a2.chunk.js",
+    "main.js.map": "/static/js/main.4868e6a2.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.41da76da.js",
+    "runtime-main.js.map": "/static/js/runtime-main.41da76da.js.map",
+    "static/js/2.db592565.chunk.js": "/static/js/2.db592565.chunk.js",
+    "static/js/2.db592565.chunk.js.map": "/static/js/2.db592565.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.af8042a973e1df5864724466429a06ad.js": "/precache-manifest.af8042a973e1df5864724466429a06ad.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.db592565.chunk.js.LICENSE": "/static/js/2.db592565.chunk.js.LICENSE",
+    "static/media/air_bnb_main.png": "/static/media/air_bnb_main.6ee36e9f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.41da76da.js",
+    "static/js/2.db592565.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.4868e6a2.chunk.js"
+  ]
+}
