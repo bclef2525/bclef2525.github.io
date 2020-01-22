@@ -1,13 +1,19 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import styled from "styled-components";
-import Main from "./pages/Main";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import reducer from "./Reducers";
+import { composeWithDevTools } from "redux-devtools-extension";
+import Routes from "./routes";
+const store = createStore(reducer, composeWithDevTools());
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <>
-      <Main></Main>
+      <Provider store={store}>
+        <Routes />
+      </Provider>
+      ,
     </>
   );
 };

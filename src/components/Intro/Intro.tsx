@@ -1,25 +1,43 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-interface Props {}
+interface Props {
+  splash: boolean | undefined;
+}
 
 const Intro = (props: Props) => {
   return (
     <Container>
       <Inner>
         <Relative>
-          <TextContainer style={{ fontSize: "80px" }}>
+          <TextContainer
+            style={
+              props.splash
+                ? { animationDelay: "7.5s", fontSize: "80px" }
+                : { animationDelay: "1.5s", fontSize: "80px" }
+            }
+          >
             안녕하세요!
           </TextContainer>
         </Relative>
         <Relative>
-          <TextContainer>
+          <TextContainer
+            style={
+              props.splash
+                ? { animationDelay: "7.5s" }
+                : { animationDelay: "1.5s" }
+            }
+          >
             {/* style={{ animationDelay: "8.5s" }} */}
             프론트 엔드 개발자
           </TextContainer>
         </Relative>
         <Relative>
-          <TextContainer>
+          <TextContainer
+            style={
+              props.splash ? { animationDelay: "8s" } : { animationDelay: "2s" }
+            }
+          >
             {/* style={{ animationDelay: "9s" }} */}
             조인호 입니다.
           </TextContainer>
@@ -40,12 +58,14 @@ const TextMove = keyframes`
     }
 `;
 const Container = styled.div`
+  margin-left: 10px;
+  margin-top: 80px;
   width: 100%;
-  height: 50vh;
+  height: 45vh;
 `;
 
 const Inner = styled.div`
-  margin: 80px auto;
+  margin: 20px auto;
   width: 80%;
   height: 80%;
 `;
@@ -54,7 +74,7 @@ const Relative = styled.div`
 `;
 const TextContainer = styled.div`
   animation: ${TextMove} 2s ease-in;
-  //   animation-delay: 8s;
+  animation-delay: 7s;
   animation-fill-mode: both;
   opacity: 0;
   font-size: 60px;

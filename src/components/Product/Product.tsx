@@ -1,17 +1,21 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
-
+import styled, { keyframes, css } from "styled-components";
+import { Link } from "react-router-dom";
 interface Props {
   image: string;
+  subTitle: string;
+  width?: string;
+  margin?: string;
+  delay?: string;
 }
 
 const Product = (props: Props) => {
   return (
-    <Container>
-      <Subtitle>호텔예약 사이트</Subtitle>
+    <Container {...props}>
+      <Subtitle>{props.subTitle}</Subtitle>
       <Inner>
         <ImageContainer>
-          <Image src={props.image}></Image>
+          <Image {...props} src={props.image}></Image>
         </ImageContainer>
       </Inner>
     </Container>
@@ -30,27 +34,33 @@ const ImageMove = keyframes`
         opacity:1
     }
 `;
-const Container = styled.div`
+const Container = styled.div<Props>`
+  text-align: center;
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 1200px;
   justify-content: center;
   align-items: center;
+  margin-bottom: ${props => (props.margin ? props.margin : "20px")};
+  ${props =>
+    props.delay &&
+    css`
+      animation: ${ImageMove} 1s ease-in ${props.delay};
+      animation-fill-mode: both;
+    `};
 `;
 const Inner = styled.div`
-  width: 70%;
-  height: 100%;
+  width: 55%;
+  height: 85%;
 `;
 const ImageContainer = styled.div`
   width: 100%;
-  height: 75%;
-`;
-const Image = styled.img`
-  //   animation-delay: 8s;
-  animation: ${ImageMove} 2s ease-in;
-  width: 100%;
   height: 100%;
+`;
+const Image = styled.img<Props>`
+  //   animation-delay: 8s;
+  width:${props => (props.width ? props.width : "100%")}
+ height: 100%;
 `;
 const Subtitle = styled.div`
   font-size: 40px;
