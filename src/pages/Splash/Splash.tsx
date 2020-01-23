@@ -80,9 +80,9 @@ const Text = styled.div`
   overflow: hidden;
   text-align: center;
   animation: ${blinkcaret}.65s step-end infinite;
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 900;
-  width: 80%;
+  width: 70%;
   color: #ffffff;
   border-right: 0.15em solid orange;
   white-space: nowrap;
