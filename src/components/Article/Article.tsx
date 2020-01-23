@@ -8,7 +8,7 @@ interface Props {
   delay?: string;
 }
 const contentMove = keyframes`
-    from{ top : 50px}to{top :15px}
+    from{ top : 70px}to{top :20px}
 `;
 const Container = styled.div<Props>`
   display: flex;
@@ -24,7 +24,8 @@ const Content = styled.div<Props>`
   width: 100%;
   font-weight: 700;
   text-align: center;
-  top: 15px;
+  top: 20px;
+  line-height: 10px;
   ${props =>
     props.animation === true &&
     css`
@@ -42,7 +43,7 @@ const Inner = styled.div`
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 50px;
+  height: 55px;
   margin-bottom: 15px;
 `;
 
