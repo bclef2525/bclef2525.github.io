@@ -29,31 +29,33 @@ const loading = keyframes`
     {
         0%{
             display:block;
-            position:absolute;
             top:0px;
            
         }
         70%{
             display:block;
-            position:absolute;
+      
             top:0px;
            
         }
         90%{
             display:block;
-            position:absolute;
+       
             top:-1800px;
            
         }
         100%{
-            position:absolute;
+      
             top:-1800px;
             display:none;
         }
     }
 `;
 const Container = styled.div`
-  position: absolute;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
   animation: ${loading} 8s ease-in;
   animation-fill-mode: both;
   width: 100vw;
