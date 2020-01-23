@@ -82,7 +82,7 @@ const Text = styled.div`
   animation: ${blinkcaret}.65s step-end infinite;
   font-size: 300%;
   font-weight: 900;
-  width: 75%;
+  width: 70%;
   color: #ffffff;
   border-right: 0.15em solid orange;
   white-space: nowrap;
