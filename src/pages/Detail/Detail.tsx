@@ -42,16 +42,12 @@ const Detail = () => {
       <Article fontSize={26} content={["회원가입 페이지"]}></Article>
       <Product
         width="100%"
-        subTitle="HostRegiste"
+        subTitle="HostRegister"
         image={HostRegiste}
       ></Product>
       <Article
         fontSize={26}
-        content={[
-          "호스트등록 페이지",
-          "multipart-formdata 타입 파일전송",
-          "컴포넌트 재사용을 통한 생산성 향상"
-        ]}
+        content={["호스트등록 페이지", "multipart-formdata 타입 파일전송"]}
       ></Article>
       <MovieProduct
         subTitle="dropDown & Map"
@@ -61,7 +57,7 @@ const Detail = () => {
         fontSize={26}
         content={[
           "호스트등록 페이지",
-          "multipart-formdata 타입 파일전송",
+          "drop-down",
           "컴포넌트 재사용을 통한 생산성 향상"
         ]}
       ></Article>
