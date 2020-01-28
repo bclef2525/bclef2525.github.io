@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const logger = require("morgan");
 const path = require("path");
-const env = process.env.ENV;
+const env = process.env;
 const app = express();
 
 const isDevelopment = env.NODE_ENV === "development";
@@ -27,5 +27,5 @@ app.get("/*", function(req, res) {
 const port = isDevelopment ? 3000 : 80;
 
 app.listen(port, () => {
-  console.log("listening: " + env);
+  console.log("listening: " + env.NODE_ENV);
 });
