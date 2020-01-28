@@ -61,7 +61,10 @@ const ReactNativeDetail = () => {
         content={["오픈API를 활용하여 영화소개 앱 제작"]}
       ></Article>
 
-      <Article fontSize={56} content={["React/SCSS/REST API/Git"]}></Article>
+      <Article
+        fontSize={56}
+        content={["React-Native/Styled-components/REST API/Git"]}
+      ></Article>
       <Link href="https://www.youtube.com/watch?v=hvcdtuk2U50&t=6s">
         프로젝트 동영상 링크
       </Link>
